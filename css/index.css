@@ -1,0 +1,156 @@
+:root {
+    --global--color--thelatters: #fff;
+    --input--transition: #DCDCDC;
+    --purple-neon: #6E0DD0;
+    --pink--neon: #FF0099;
+    --orange--neon: #FF6600;
+    --black--transition-one: #000000;
+    --black--trasition-two: #1C1C1C;
+    --black-transition-three: #363636;
+
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--global--color--thelatters);
+    color: var(--global--color--thelatters);
+    background-image: linear-gradient( to right, var(--purple-neon) ,var(--pink--neon), var(--orange--neon) );
+}
+
+#container-itens {
+    display: flex;
+    justify-content: center;
+    margin: 0 134px;
+}
+
+#background-style-text {
+    /*padding: 9.7vh;*/
+    padding: 50px;
+    margin: 23px 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-image: linear-gradient( to right, var(--black--transition-one),var(--black--transition-one) , var(--black--trasition-two));
+} 
+
+#background-style {
+    /*padding: 4.8vh; */
+    margin: 23px 0;
+    padding: 155px 75px 0 51px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: linear-gradient( to right, var(--black--trasition-two), var(--black-transition-three), var(--black-transition-three));
+}
+ 
+#background-style p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#style-title {
+    text-align: center;
+    font-weight: 700;
+    margin: 0px 0 35px 0;
+    font-size: 30px;
+}
+
+#text-decription {
+    line-height: 25px;
+    text-indent: 22px;
+    text-align: justify;
+}
+
+#style-table {
+    background-image: linear-gradient( to right, var(--purple-neon) ,var(--pink--neon));
+    text-align: center;
+    margin: 25px auto 0;
+}
+
+#style-table tr td{
+    padding: 10px;
+    border: 2px solid;
+    border-color: var(--purple-neon);
+    /*border-image-source: linear-gradient(to left, #00C853, #B2FF59);*/
+}
+
+#background-style p span {
+    font-size: small;
+}
+
+#total-imc {
+    margin: 25px 0 0;
+    background-image: linear-gradient( to right, var(--pink--neon), var(--orange--neon));
+    border-radius: 7px;
+    padding: 15px 17px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#result {
+    border-radius: 5px;
+    border: 0px solid;
+    background-image: linear-gradient( to right, var(--pink--neon), var(--orange--neon));
+    height: 26px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+    color: var(--global--color--thelatters);
+    width: 176px;
+}
+
+#style-footer {
+    margin: -20px 2px;
+    padding: 1.5vh;
+}
+
+.input-styles {
+    width: 45vh;
+    border-radius: 5px;
+    border: 4px solid var(--global--color--thelatters);
+    height: 26px;
+    margin: 7px 0 29px 0;
+    padding: 0 10px;
+    font-size: 18px;
+    outline: none;
+}
+
+.input-styles:hover{
+    background-color: var(--input--transition);
+    transition: 500ms;
+}
+
+.button-submit {
+    outline: none;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    background-color: var(--global--color--thelatters);
+    width: 18vh;
+    height: 5vh;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.button-submit:hover{
+    color: var(--global--color--thelatters);
+    background-image: linear-gradient( to right, var(--purple-neon) , var(--pink--neon), var(--orange--neon));
+    transition: 400ms;
+}
+
+.button-clear {
+    outline: none;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    background-color: var(--global--color--thelatters);
+    width: 18vh;
+    height: 5vh;
+    font-size: 16px;
+    margin: 0 0 0 15px;
+    cursor: pointer;
+}
+
+.button-clear:hover{
+    color: var(--global--color--thelatters);
+    background-image: linear-gradient( to right, var(--orange--neon),var(--purple-neon), var(--pink--neon));
+    transition: 400ms;
+}

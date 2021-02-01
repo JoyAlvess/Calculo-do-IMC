@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icons/j.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Cálculo do IMC</title>
+</head>
+<body>
+    <div id="container">
+        <div id="container-itens">
+            <div id="background-style-text">
+                <h2 id="style-title">Cálculo IMC</h2>
+                <p id="text-decription">
+                    IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de 
+                    Saúde para calcular o peso ideal de cada pessoa.
+                    O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura 
+                    elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está 
+                    entre 18,5 e 24,9.
+                    Quer descobrir seu IMC? Insira seu peso e sua altura nos campos ao lado e compare com os 
+                    índices da tabela.
+                </p>
+                <table id="style-table">
+                    <thead>
+                        <tr>
+                            <td>IMC</td>
+                            <td>Classificação</td>
+                            <td>Obesidade (Grau)</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Menor que 18,5</td>
+                            <td>Magreza</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Entre 18,5 e 24,9</td>
+                            <td>Normal</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Entre 25,0 e 29,9</td>
+                            <td>Sobrepeso</td>
+                            <td>I</td>
+                        </tr>
+                        <tr>
+                            <td>Entre 30,0 e 39,9</td>
+                            <td>Obesidade</td>
+                            <td>II</td>
+                        </tr>
+                        <tr>
+                            <td>Maior que 40,0</td>
+                            <td>Obesidade Grave</td>
+                            <td>III</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="background-style">
+                <div id="imc">
+                    <label for="">Digite seu peso:</label>
+                    <input type="number" min="0" max="1000" name="weight" id="weight" class="input-styles" placeholder="Ex: 69.2">
+                    <label for="">Digite sua altura:</label>
+                    <input type="number" min="0" max="4" name="heigh" id="heigh" class="input-styles" placeholder="Ex: 1.70">
+                    <button class="button-submit" onclick="calculateIMC()">Calcular</button>
+                    <button class="button-clear" onclick="clearIMC()">Limpar</button>
+                    <div id="total-imc">
+                        Seu IMC: <input type="text" id="result" disabled/>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <footer id="style-footer">
+            <span>&copy JoyAlves</span>
+        </footer>
+    </div>
+    <script>
+        function calculateIMC() {
+            const weight = Number(document.getElementById('weight').value);
+            const heigh = Number(document.getElementById('heigh').value);
+            const result = weight / (heigh * heigh);
+            document.getElementById('result').value = result.toFixed(2);
+        };
+
+        function clearIMC() {
+            document.getElementById('weight').value = '';
+            document.getElementById('heigh').value = '';
+            document.getElementById('result').value = '';
+        }
+    </script>
+</body>
+</html>
